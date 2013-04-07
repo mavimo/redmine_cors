@@ -1,0 +1,7 @@
+<p>
+  <%=content_tag(:label, l(:label_cors_domain) + ":") %>
+  <%=text_field_tag "settings[cors_domain]", @settings["cors_domain"], :size => 100 %><br/>
+  (<%=l(:label_default)%>: 0)
+  <br/>
+  <%= l(:description_cors_domain) %>
+</p>

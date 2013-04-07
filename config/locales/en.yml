@@ -1,0 +1,3 @@
+en:
+  label_cors_domain: Domain
+  description_cors_domain: Define domain allowed in CORS
