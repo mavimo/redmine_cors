@@ -11,10 +11,10 @@ module RedmineCors
 
       module InstanceMethods
         def cors_set_access_control_headers
-          allowed_origins = Setting.plugin_redmine_cors["cors_domain"].downcase.split(" ,")
+          allowed_origins = Setting.plugin_redmine_cors["cors_domain"].to_s.downcase.split(/[ ,]/).reject { |c| c.empty? }
           if not request.headers["Origin"].nil?
-            if allowed_origins.include? request.headers["Origin"].downcase
-              headers['Access-Control-Allow-Origin'] = request.headers["Origin"]
+            if allowed_origins.include? request.headers["Origin"].to_s.downcase
+              headers['Access-Control-Allow-Origin'] = request.headers["Origin"].to_s
               headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT'
               headers['Access-Control-Max-Age'] = "1728000"
             end
