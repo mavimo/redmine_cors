@@ -25,6 +25,6 @@ Redmine::Plugin.register :redmine_cors do
 
   settings :partial => 'settings/cors_settings',
     :default => {
-      "cors_domain" => "*",
+      "cors_domain" => "",
     }
 end
