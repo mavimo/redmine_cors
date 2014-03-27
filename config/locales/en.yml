@@ -1,3 +1,3 @@
 en:
-  label_cors_domain: Domain
-  description_cors_domain: Define domain allowed in CORS
+  label_cors_domain: Domain(s)
+  description_cors_domain: Define domain(s) (comma or space separated) allowed in CORS
