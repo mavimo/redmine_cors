@@ -26,5 +26,8 @@ Redmine::Plugin.register :redmine_cors do
   settings :partial => 'settings/cors_settings',
     :default => {
       "cors_domain" => "",
+      "cors_headers" => "X-Requested-With, X-Prototype-Version, Content-Type, X-Redmine-API-Key, accept, authorization",
+      "cors_methods" => "POST, GET, OPTIONS, PUT",
+      "cors_maxage" => "1728000"
     }
 end

@@ -1,3 +1,9 @@
 en:
   label_cors_domain: Domain(s)
-  description_cors_domain: Define domain(s) (comma or space separated) allowed in CORS
+  description_cors_domain: Define origins(s) (comma or space separated) allowed in CORS, you should include http(s)://
+  label_cors_headers: Allowed Headers
+  description_cors_headers: Define headers (comma separated) allowed in CORS requests
+  label_cors_methods: Allowed Methods
+  description_cors_methods: Define methods (comma separated) allowed in CORS requests
+  label_cors_maxage: Max age
+  description_cors_maxage: Define max age (in seconds) that browsers will cache CORS headers
