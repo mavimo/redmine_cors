@@ -7,3 +7,5 @@ en:
   description_cors_methods: Define methods (comma separated) allowed in CORS requests
   label_cors_maxage: Max age
   description_cors_maxage: Define max age (in seconds) that browsers will cache CORS headers
+  label_cors_credentials: Allow Credentials
+  description_cors_credentials: Whether to allow credentials to be sent by browser (use of Authorization header)

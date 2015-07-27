@@ -9,6 +9,9 @@ class CorsController < ApplicationController
             headers['Access-Control-Allow-Methods'] = Setting.plugin_redmine_cors["cors_methods"]
             headers['Access-Control-Allow-Headers'] = Setting.plugin_redmine_cors["cors_headers"]
             headers['Access-Control-Max-Age'] = Setting.plugin_redmine_cors["cors_maxage"]
+            if (Setting.plugin_redmine_cors["cors_credentials"] == '1')
+              headers['Access-Control-Allow-Credentials'] = 'true'
+            end
         end
     end
     headers['Vary'] = 'Origin'

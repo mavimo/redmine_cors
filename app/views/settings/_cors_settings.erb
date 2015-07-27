@@ -29,3 +29,10 @@
   <%= l(:description_cors_maxage) %>
 </p>
 
+<p>
+  <%=content_tag(:label, l(:label_cors_credentials) + ":") %>
+  <%=check_box_tag "settings[cors_credentials]", '1', @settings["cors_credentials"] %><br/>
+  (<%=l(:label_default)%>: 0)
+  <br/>
+  <%= l(:description_cors_credentials) %>
+</p>

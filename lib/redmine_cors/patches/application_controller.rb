@@ -15,8 +15,9 @@ module RedmineCors
           if not request.headers["Origin"].nil?
             if allowed_origins.include?("*") || allowed_origins.include?(request.headers["Origin"].to_s.downcase)
               headers['Access-Control-Allow-Origin'] = request.headers["Origin"].to_s
-              headers['Access-Control-Allow-Methods'] = Setting.plugin_redmine_cors["cors_methods"]
-              headers['Access-Control-Max-Age'] = "1728000"
+              if (Setting.plugin_redmine_cors["cors_credentials"] == '1')
+                headers['Access-Control-Allow-Credentials'] = 'true'
+              end
             end
             headers['Vary'] = 'Origin'
           end
